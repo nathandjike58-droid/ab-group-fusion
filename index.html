@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="AB GROUP FUSION — Collection de vêtements pour hommes et femmes. Style, élégance et qualité." />
+  <meta name="theme-color" content="#000000" />
+  <title>AB GROUP FUSION</title>
+
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --dark: #000000;
+      --dark-soft: #222222;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --focus: 3px solid #ffd54f;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: #fff;
+      color: var(--dark);
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transform: translateY(-150%);
+      transition: transform 0.2s ease;
+      z-index: 10;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 30px 16px;
+    }
+    header h1 {
+      margin: 0;
+      letter-spacing: 2px;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+    }
+    header p {
+      margin: 8px 0 0;
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: var(--dark-soft);
+      padding: 14px 8px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    nav a:hover { background: rgba(255,255,255,0.08); }
+    nav a:focus { outline: var(--focus); }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 14px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 30px 12px 10px;
+    }
+    .intro h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+    }
+    .intro p {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.3rem, 2.2vw, 2rem);
+      margin: 20px 0 12px;
+    }
+
+    .produits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      padding: 12px 0 22px;
+    }
+
+    .article {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 340px;
+    }
+
+    .article img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #ececec;
+    }
+
+    .article-body {
+      padding: 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .article h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      text-align: center;
+    }
+
+    .prix {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 0 14px;
+    }
+
+    .bouton {
+      display: inline-block;
+      background: var(--dark);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding: 11px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: auto;
+      transition: opacity 0.2s ease;
+    }
+    .bouton:hover { opacity: 0.95; }
+    .bouton:focus { outline: var(--focus); }
+
+    .bouton.secondary {
+      background: #0a7d37;
+      margin-left: 8px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 18px 12px 24px;
+      margin-top: 20px;
+    }
+    footer p { margin: 8px 0; }
+
+    @media (max-width: 480px) {
+      .article img { height: 200px; }
+      .bouton.secondary { margin-left: 0; margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header>
+    <h1>AB GROUP FUSION</h1>
+    <p>La mode pour tous</p>
+  </header>
+
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#hommes">Hommes</a></li>
+      <li><a href="#femmes">Femmes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container">
+    <section class="intro" id="accueil">
+      <h2>Bienvenue chez AB GROUP FUSION</h2>
+      <p>Découvre notre collection de vêtements pour hommes et femmes.</p>
+      <p>Style • Élégance • Qualité</p>
+    </section>
+
+    <h2 class="section-title" id="hommes">Collection Homme</h2>
+    <section class="produits" aria-label="Collection Homme">
+      <article class="article">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="T-shirt homme">
+        <div class="article-body">
+          <h3>T-shirt homme</h3>
+          <p class="prix">20 000 FCFA</p>
+          <a class="bouton" href="https://wa.me/225769419087?text=Bonjour%2C%20je%20veux%20commander%20le%20T-shirt%20homme">Commander</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80" alt="Jean homme">
+        <div class="article-body">
+          <h3>Jean homme</h3>
+          <p class="prix">20 000 FCFA</p>
+          <a class="bouton" href="https://wa.me/225769419087?text=Bonjour%2C%20je%20veux%20commander%20le%20Jean%20homme">Commander</a>
+        </div>
+      </article>
+    </section>
+
+    <h2 class="section-title" id="femmes">Collection Femme</h2>
+    <section class="produits" aria-label="Collection Femme">
+      <article class="article">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Robe femme">
+        <div class="article-body">
+          <h3>Robe femme</h3>
+          <p class="prix">20 000 FCFA</p>
+          <a class="bouton" href="https://wa.me/225769419087?text=Bonjour%2C%20je%20veux%20commander%20la%20robe%20femme">Commander</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80" alt="Sac femme">
+        <div class="article-body">
+          <h3>Sac femme</h3>
+          <p class="prix">20 000 FCFA</p>
+          <a class="bouton" href="https://wa.me/225769419087?text=Bonjour%2C%20je%20veux%20commander%20le%20sac%20femme">Commander</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="intro" id="contact">
+      <h2>Contact et commandes</h2>
+      <p>Pour commander, contacte-nous directement sur WhatsApp.</p>
+      <div>
+        <a class="bouton" href="https://wa.me/225769419087">Commander sur WhatsApp</a>
+        <a class="bouton secondary" href="tel:+225769419087">Appeler</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 AB GROUP FUSION</p>
+    <p>Merci pour votre confiance !</p>
+  </footer>
+</body>
+</html>
